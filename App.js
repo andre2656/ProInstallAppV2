@@ -7,7 +7,8 @@ import {
   Text,
   StatusBar,
   Image,
-  TextInput
+  TextInput,
+  TouchableOpacity
 } from 'react-native';
 
 import CheckBox from 'react-native-check-box';
