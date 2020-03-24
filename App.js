@@ -22,6 +22,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import MainJobTabs, { createSimpleTabs } from './navigation/MainJobTabs';
+import RouteNav from './navigation/RouteNavigator';
 import CheckBox from 'react-native-check-box';
 
 const data = [
