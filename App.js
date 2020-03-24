@@ -21,6 +21,22 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+const data = [
+  { component: MainJobTabs, title: 'Job', routeName: 'JobTabs' },
+  { component: RouteNav, title: 'MainMenu', routeName: 'Main' },
+];
+
+['initialRoute', 'none', 'order', 'history'].forEach(backBehavior => {
+  data.push({
+    component: createSimpleTabs({
+      backBehavior: backBehavior,
+      initialRouteName: 'Main', // more easy to test initialRoute behavior
+    }),
+    title: `Tabs backBehavior=${backBehavior}`,
+    routeName: `Tabs backBehavior=${backBehavior}`,
+  });
+});
+Asset.loadAsync(StackAssets);
 
 export class App extends React.Component {
 
@@ -48,9 +64,52 @@ export class App extends React.Component {
   }
 
 
+  setUser = (user) => {
+    console.log("setUser", user);
+    this.setState({ user: user });
+  }
 
+  _renderItem = ({ item }) => (
+    <List.Item
+      title={item.title}
+      onPress={() => this.props.navigation.navigate(item.routeName)}
+    />
+  );
+  menuClicked = () => {
+    if (this.state.menuOpen) {
+      this.setState({
+        menuOpen: false,
+        displayMenu: 0,
+      })
+    } else if (!this.state.menuOpen) {
+      this.setState({
+        menuOpen: true,
+        displayMenu: 65,
+      })
+    }
+  };
+  submitPressed = () => {
 
+    //add verification here
+    this.props.navigation.navigate('Main')
 
+  }
+  static navigationOptions = ({ navigation }) => ({
+    tabBarLabel: navigation.getParam('title'),
+    tabBarIcon: ({ tintColor }) => (
+      <Icon
+        name={navigation.getParam('icon')}
+        type='font-awesome'
+        iconStyle={{ height: 100, width: '100%', marginBottom: -50, backgroundColor: 'black', paddingLeft: '44%', paddingRight: '44%', paddingTop: 10, paddingBottom: '50%', color: 'white' }}
+        color={tintColor}
+      />
+    ),
+  });
+  static navigationOptions = {
+    header: null,
+  };
+
+  _keyExtractor = item => item.routeName;
 
   render(){
     return (
