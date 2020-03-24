@@ -32,6 +32,26 @@ export class App extends React.Component {
     email: 'andre2656@gmail.com',
     password: 'password'
   };
+  login = (e) => {
+    console.log('login commencing')
+    this.props.navigation.navigate('Main')
+
+    // loginController.login('andre2656@gmail.com', 'test', (err, user) => {
+
+    //   if (err) {
+    //     console.log(err)
+    //   } else {
+    //    console.log('login success ')
+    //     
+    //   }
+    // });
+  }
+
+
+
+
+
+
   render(){
     return (
       <>
@@ -56,6 +76,7 @@ export class App extends React.Component {
           </View>
 
           <View style={{ marginTop: '45%' }}>
+            {/* Username For Login Sent to the Database on Submit see UsernameAuth function for verification procedure */}
             <View style={{ borderColor: 'transparent', width: '90%', flexDirection: 'row', marginTop: 20, marginHorizontal: '5%', borderColor: 'transparent', borderBottomColor: 'black', borderWidth: 2, marginTop: '5%' }}>
               <TextInput style={{ maxHeight: 150, maxWidth: 350, width: '100%', fontSize: 23, padding: 10 }}
                 keyboardType='default'
@@ -65,6 +86,7 @@ export class App extends React.Component {
                 returnKeyType={'next'}
                 type={'username'} />
             </View>
+            {/* Password For Login Sent to the Database on Submit see UsernameAuth function for verification procedure*/}
             <View style={{ borderColor: 'transparent', width: '90%', flexDirection: 'row', marginTop: '6%', marginHorizontal: '5%', borderColor: 'transparent', borderBottomColor: 'black', borderWidth: 2, }}>
               <TextInput style={{ maxHeight: 150, maxWidth: 350, width: '100%', fontSize: 23, padding: 10 }}
                 keyboardType='default'
@@ -77,6 +99,7 @@ export class App extends React.Component {
               />
             </View>
             <View style={{ flexDirection: 'row', marginVertical: '5%' }}>
+              {/* Checkbox for visability of password */}
               <CheckBox
                 style={{ paddingLeft: '35%', width: '100%', height: 30, paddingRight: '5%' }}
                 onClick={() => {
@@ -93,15 +116,12 @@ export class App extends React.Component {
 
             </View>
             <View style={{ width: '90%', flexDirection: 'row', marginTop: '15%', marginHorizontal: '5%', }}>
+              {/* Submit button Calls Login function to verify and compair with DB */}
               <TouchableOpacity
-                style={{ marginTop: 25, height: 65, backgroundColor: '#F5F5F5', width: '30%', marginHorizontal: '35%', paddingVertical: 0, borderColor: 'transparent', borderBottomColor: '#282828', borderTopColor: '#282828', borderWidth: 2, textAlign: 'center' }}
+                style={{ marginTop: 25, height: 65, backgroundColor: '#CCCCCC', width: '30%', marginHorizontal: '35%', paddingVertical: 0, borderColor: 'transparent', borderBottomColor: '#282828', borderTopColor: '#282828', borderWidth: 2, textAlign: 'center' }}
                 onPress={() => this.login()} >
                 <Text style={{ fontSize: 32, color: 'black', fontWeight: '600', marginTop: '8%', textAlign: "center" }}> Login </Text>
               </TouchableOpacity>
-              {/* <TouchableOpacity style={{ marginTop: 25, height: 65, backgroundColor: '#F5F5F5', width: 150, marginHorizontal: '33%', paddingVertical: 0, borderColor: 'transparent', borderBottomColor: '#282828', borderTopColor: '#282828', borderWidth: 2, textAlign: 'center' }}
-              onPress={this.submitPressed()}>
-              <Text style={{ fontSize: 32, color: 'black', fontWeight: '600', marginTop: '8%', textAlign: "center" }}> Login </Text>
-            </TouchableOpacity> */}
             </View>
           </View>
 
