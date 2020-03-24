@@ -11,7 +11,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import CheckBox from 'react-native-check-box';
+
 
 import {
   Header,
@@ -20,6 +20,9 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import MainJobTabs, { createSimpleTabs } from './navigation/MainJobTabs';
+import CheckBox from 'react-native-check-box';
 
 const data = [
   { component: MainJobTabs, title: 'Job', routeName: 'JobTabs' },
