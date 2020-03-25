@@ -13,14 +13,7 @@ import {
     TouchableWithoutFeedback,
 } from 'react-native';
 import { CameraRoll } from 'react-native-cameraroll';
-import { FormLabel, FormInput, FormValidationMessage, } from 'react-native-elements'
-import { WebBrowser } from 'expo';
-import { MonoText } from '../components/StyledText';
-import Upload from '../components/Upload'
-import CheckBox from 'react-native-check-box'
-import { Feather } from '@expo/vector-icons';
 import { Icon, Button } from 'react-native-elements';
-import Header from '../components/Header';
 import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
 import style from '../components/camera/styles'
