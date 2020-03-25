@@ -7,25 +7,19 @@ import {
     Text,
     TouchableOpacity,
     View,
-    FlatList,
     TextInput,
     Picker,
     TouchableWithoutFeedback
 } from 'react-native';
-import { RNCameraRoll } from 'react-native-cameraroll';
 import { Camera } from 'expo-camera';
-import { FormLabel, FormInput, FormValidationMessage, } from 'react-native-elements'
-import { WebBrowser } from 'expo';
-import { MonoText } from '../components/StyledText';
-import Upload from '../components/Upload'
-import CheckBox from 'react-native-check-box'
-import { NavigationEvents, createStackNavigator, createAppContainer } from 'react-navigation';
+import CheckBox from 'react-native-check-box';
 import { Icon, Button } from 'react-native-elements';
-import Header from '../components/Header';
 import * as Permissions from 'expo-permissions';
 import * as ImagePicker from 'expo-image-picker';
-import style from '../components/camera/styles'
+import style from '../components/camera/styles';
 const capturing = false;
+
+
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
         header: null,
@@ -56,6 +50,8 @@ export default class HomeScreen extends React.Component {
         image: null,
         RoomNumber: 1,
     }
+
+    //Needs Notes
     async componentDidMount() {
         let Name = this.props.navigation.getParam('name')
         this.setState({ JobName: Name })
