@@ -9,7 +9,7 @@ import { Button } from 'react-native-elements';
 
 //Dashboard Code
 
-export default class Measure extends React.Component {
+export default class Dashboard extends React.Component {
     static navigationOptions = {
         header: null,
     };
