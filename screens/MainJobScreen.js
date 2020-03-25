@@ -9,12 +9,10 @@ import {
     View,
     FlatList,
 } from 'react-native';
-import { NavigationEvents, createStackNavigator, createAppContainer } from 'react-navigation';
 import { WebBrowser } from 'expo';
-import { MonoText } from '../components/StyledText';
 import { Icon, Button } from 'react-native-elements';
-import Header from '../components/Header';
 import CheckBox from 'react-native-check-box';
+
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
         header: null,
@@ -24,8 +22,9 @@ export default class HomeScreen extends React.Component {
         Rooms: null,
         Windows: 0,
         text: '',
-        JobName: 'The Hilton',
+        JobName: '',
     }
+    //Navigation that links to This screen
     static navigationOptions = ({ navigation }) => ({
         tabBarLabel: navigation.getParam('title'),
         tabBarIcon: ({ tintColor }) => (
@@ -37,6 +36,7 @@ export default class HomeScreen extends React.Component {
             />
         ),
     });
+    // When the screen loads it grabs the name and other params here.
     async componentDidMount() {
         let Name = this.props.navigation.getParam('name')
         this.setState({ JobName: Name })
