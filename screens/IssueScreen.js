@@ -16,7 +16,7 @@ import { CameraRoll } from 'react-native-cameraroll';
 import { Icon, Button } from 'react-native-elements';
 import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
-import style from '../components/camera/styles'
+// import style from '../components/camera/styles'
 const capturing = false;
 export default class HomeScreen extends React.Component {
     static navigationOptions = {

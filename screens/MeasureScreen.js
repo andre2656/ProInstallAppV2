@@ -16,7 +16,7 @@ import * as Permissions from 'expo-permissions';
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
 import { Camera } from 'expo-camera';
-import style from '../components/camera/styles'
+// import style from '../components/camera/styles'
 const capturing = false;
 
 export default class Measure extends React.Component {

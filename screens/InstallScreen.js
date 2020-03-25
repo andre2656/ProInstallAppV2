@@ -16,7 +16,7 @@ import CheckBox from 'react-native-check-box';
 import { Icon, Button } from 'react-native-elements';
 import * as Permissions from 'expo-permissions';
 import * as ImagePicker from 'expo-image-picker';
-import style from '../components/camera/styles';
+// import style from '../components/camera/styles';
 const capturing = false;
 
 

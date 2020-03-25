@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "expo": "^36.0.2",
+    "expo-camera": "^8.0.0",
+    "expo-image-picker": "^8.0.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-check-box": "^2.1.7",
