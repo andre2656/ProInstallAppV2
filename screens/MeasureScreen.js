@@ -23,8 +23,6 @@ export default class Measure extends React.Component {
     static navigationOptions = {
         header: null,
     };
-
-
     state = {
         Unit: '',
         Rooms: null,
@@ -64,7 +62,7 @@ export default class Measure extends React.Component {
         WindowCaptured: 'Window A'
 
     }
-
+//needs Notes
     async componentDidMount() {
         let Name = this.props.navigation.getParam('name')
         this.setState({ JobName: Name })
