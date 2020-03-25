@@ -12,7 +12,7 @@ import {
     Picker,
     TouchableWithoutFeedback,
 } from 'react-native';
-import { CameraRoll } from 'react-native-cameraroll';
+// import { CameraRoll } from 'react-native-cameraroll';
 import { Icon, Button } from 'react-native-elements';
 import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
@@ -60,14 +60,14 @@ export default class HomeScreen extends React.Component {
         this.setState({ JobName: Name })
         const { status } = await Permissions.askAsync(Permissions.CAMERA, Permissions.CAMERA_ROLL);
         this.setState({ hasCameraPermission: status === 'granted' });
-        CameraRoll.getPhotos({
-            first: 25,
-            groupTypes: 'All',
-            assetType: 'All',
-        }).then(r => {
-            // console.log(r.edges)
-            this.setState({ photos: r.edges })
-        })
+        // CameraRoll.getPhotos({
+        //     first: 25,
+        //     groupTypes: 'All',
+        //     assetType: 'All',
+        // }).then(r => {
+        //     // console.log(r.edges)
+        //     this.setState({ photos: r.edges })
+        // })
     }
     handleShortCapture = async () => {
         await this.Camera.takePictureAsync().then((data) => {
@@ -118,28 +118,28 @@ export default class HomeScreen extends React.Component {
         }
     }
     GalleryDisplay = () => {
-        CameraRoll.getPhotos({
-            first: 10,
-            groupTypes: 'All',
-            assetType: 'All',
-        })
-            .then(r => {
-                // console.log(r.edges)
-                this.setState({ photos: r.edges },
-                    () => {
-                        // console.log('r= ', r.edges);
-                        if (this.state.photos.length === 0) {
-                            return <Text> Error, No photos found. (404) </Text>
-                        } else if (this.state.photos.length >= 0) {
-                            return
-                        }
+        // CameraRoll.getPhotos({
+        //     first: 10,
+        //     groupTypes: 'All',
+        //     assetType: 'All',
+        // })
+        //     .then(r => {
+        //         // console.log(r.edges)
+        //         this.setState({ photos: r.edges },
+        //             () => {
+        //                 // console.log('r= ', r.edges);
+        //                 if (this.state.photos.length === 0) {
+        //                     return <Text> Error, No photos found. (404) </Text>
+        //                 } else if (this.state.photos.length >= 0) {
+        //                     return
+        //                 }
 
-                    });
-            })
-            .catch((err) => {
-                //Error Loading Images
-                console.log(err)
-            });
+        //             });
+        //     })
+        //     .catch((err) => {
+        //         //Error Loading Images
+        //         console.log(err)
+        //     });
     }
     menuClicked = () => {
         if (this.state.menuOpen) {

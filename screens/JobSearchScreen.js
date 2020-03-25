@@ -10,7 +10,7 @@ import {
     Animated
 } from 'react-native';
 import { Icon, Button } from 'react-native-elements';
-import Colors from '../constants/Colors';
+import Colors from '../Icon/Colors';
 
 //Code for JobSearch Needs Notes
 export default class JobSearch extends React.Component {

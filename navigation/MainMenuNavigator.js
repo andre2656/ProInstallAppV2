@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import MainMenuIcon from '../Icon/Icon/MainMenuIcon';
+import MainMenuIcon from '../Icon/MainMenuIcon';
 import HomeScreen from '../screens/HomeScreen';
 import JobSearchScreen from '../screens/JobSearchScreen';
 import DashboardScreen from '../screens/DashboardScreen';
