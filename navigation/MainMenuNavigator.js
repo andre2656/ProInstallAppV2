@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack'
 import MainMenuIcon from '../Icon/MainMenuIcon';
 import HomeScreen from '../screens/HomeScreen';
 import JobSearchScreen from '../screens/JobSearchScreen';

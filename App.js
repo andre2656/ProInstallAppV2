@@ -11,8 +11,6 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-
-
 import {
   Header,
   LearnMoreLinks,
