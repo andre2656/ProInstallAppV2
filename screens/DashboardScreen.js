@@ -13,10 +13,12 @@ export default class Dashboard extends React.Component {
     static navigationOptions = {
         header: null,
     };
+
+    //State will be filled out by signin props once the component mounts then will be used throughout the app as the user information
     state = {
-        Username: 'Dcampbell',
-        Firstname: 'Dre',
-        Cookie: 'dajfkaljdfjajlk432lkfakj'
+        Username: '',
+        Firstname: '',
+        Cookie: ''
     }
 
     render() {
