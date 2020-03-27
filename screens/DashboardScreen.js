@@ -20,6 +20,9 @@ export default class Dashboard extends React.Component {
         Firstname: '',
         Cookie: ''
     }
+    componentDidMount (){
+        //Add function to pull props on jobs and current user
+    }
 
     render() {
         return (
