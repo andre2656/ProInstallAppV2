@@ -25,6 +25,8 @@ export default class HomeScreen extends React.Component {
         menuOpen: false,
         displayMenu: 0,
     };
+
+    //Function for menu to open
     menuClicked = () => {
         if (this.state.menuOpen) {
             this.setState({
