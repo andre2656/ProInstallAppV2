@@ -32,13 +32,13 @@ export default class HomeScreen extends React.Component {
             this.setState({
                 menuOpen: false,
                 displayMenu: 0,
-            })
+            });
         } else if (!this.state.menuOpen) {
             this.setState({
                 menuOpen: true,
                 displayMenu: 65,
             })
-        }
+        };
     };
     navigateJob = (name) => {
 
