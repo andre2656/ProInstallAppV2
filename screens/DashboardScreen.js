@@ -27,6 +27,7 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <View style={{ backgroundColor: 'white', height: '100%' }} >
+                {/* Styling of header */}
                 <View style={{ backgroundColor: '#000', flexDirection: 'row', paddingTop: 15, width: '100%' }}>
                     {/* May need to be resized smaller and add need a job search tab added to make things easier to find. */}
                     <TouchableOpacity style={{ marginTop: 20, width: '15%', paddingLeft: '5%' }} onPress={() => { this.props.navigation.navigate('Home') }} >
@@ -51,6 +52,7 @@ export default class Dashboard extends React.Component {
                         </View>
                     </View>
                 </View>
+                {/* Simple Header transition to body */}
                 <View style={{ width: '100%', flexDirection: 'row' }}>
                     <View style={{ width: '25%', height: 15, backgroundColor: '#00c387', }}></View>
                     <View style={{ width: '25%', height: 15, backgroundColor: '#00ace3', }}></View>
