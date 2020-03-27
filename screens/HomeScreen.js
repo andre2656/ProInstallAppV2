@@ -87,14 +87,13 @@ export default class HomeScreen extends React.Component {
                     <View >
                         <Text style={{ fontSize: 25, textAlign: 'center', paddingTop: '5%', backgroundColor: 'white' }}>Latest Assigned Job</Text>
                         <ScrollView style={{}} style={{ backgroundColor: 'white', height: '58%' }} >
-
+                                {/* List that will be added by the database on click that will give user recent or assigned jobs */}
                             <View
                                 style={{
                                     flexDirection: 'row',
                                     height: 'auto',
                                 }}>
                                 <FlatList
-
                                     //Data acuired from the flatlist will be from the database with the  get latest job call
                                     data={[
                                         { key: "Cole's Luxury Hotel and Resort", day: '01', month: ' Jan' },
