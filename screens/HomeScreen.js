@@ -40,8 +40,8 @@ export default class HomeScreen extends React.Component {
             })
         };
     };
+    //Will Navigate to Job and pass the job name amongst id to main job tab
     navigateJob = (name) => {
-
         this.props.navigation.navigate('JobTabs', { name: name })
     }
 
