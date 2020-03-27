@@ -17,10 +17,11 @@ export default class HomeScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
+    //state that will be filled out by prop from signin
     state = {
-        FirstName: 'User',
-        Username: 'DCampbell',
-        Cookie: 'fja;bdkfajdw42nkdjaj;ew32lkj',
+        FirstName: '',
+        Username: '',
+        Cookie: '',
         menuOpen: false,
         displayMenu: 0,
     };
