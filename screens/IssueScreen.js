@@ -88,7 +88,9 @@ export default class HomeScreen extends React.Component {
         });
         return
     };
-    DisplayIssue = () => {
+
+    //Functionality to show different screens without having to pass props
+        DisplayIssue = () => {
         if (this.state.IssueDisplay === 'none') {
             this.setState({ CameraDisplay: 'none', IssueDisplay: 'flex', PhotoDisplay: 'none', GalleryDisplay: 'none', })
         }
