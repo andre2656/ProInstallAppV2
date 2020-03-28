@@ -124,6 +124,7 @@ export default class HomeScreen extends React.Component {
             this.displayIssue()
         }
     }
+    // end of displays 
     GalleryDisplay = () => {
         // CameraRoll.getPhotos({
         //     first: 10,
