@@ -72,6 +72,8 @@ export default class HomeScreen extends React.Component {
         //     this.setState({ photos: r.edges })
         // })
     }
+
+    //Handling of taking a picture needs to be reevaluated
     handleShortCapture = async () => {
         await this.Camera.takePictureAsync().then((data) => {
             console.log('photo data: ', data)
