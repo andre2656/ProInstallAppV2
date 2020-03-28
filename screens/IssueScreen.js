@@ -57,7 +57,7 @@ export default class HomeScreen extends React.Component {
         photos: [],
         captures: []
     }
-
+        //Once the component mounts it will async grab permissions
     async componentDidMount() {
         let Name = this.props.navigation.getParam('name')
         this.setState({ JobName: Name })
