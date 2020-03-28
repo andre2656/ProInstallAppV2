@@ -18,6 +18,8 @@ import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
 // import style from '../components/camera/styles'
 const capturing = false;
+
+//Needs notes
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
         header: null,
